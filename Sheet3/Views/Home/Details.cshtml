@@ -1,0 +1,101 @@
+﻿@model Entities.Contact
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contact</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobilePN)
+        </dt>
+
+        <dd>
+
+
+            @if (Model.MobilePN == null)
+            {
+                <text>N/A</text>
+            }
+            else
+            {
+                @Html.DisplayFor(model => model.MobilePN);
+
+            }
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomePN)
+        </dt>
+
+        <dd>
+            @if (Model.HomePN == null)
+            {
+                <text>N/A</text>
+            }
+            else
+            {
+                @Html.DisplayFor(model => model.HomePN);
+            }
+
+        </dd>
+
+        <dt>
+
+            @Html.DisplayNameFor(model => model.BusinessPN)
+        </dt>
+
+        <dd>
+            @if (Model.BusinessPN == null)
+            {
+                <text>N/A</text>
+            }
+            else
+            {
+                @Html.DisplayFor(model => model.BusinessPN);
+            }
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
